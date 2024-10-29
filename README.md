@@ -49,6 +49,7 @@ The repo contains the following notebooks and python files.
 	
 - ### Misc
 	[scaler_actuarial.gz](scaler_actuarial.gz) (scaler for the actuarial neural network)
+
 	[scaler_mtm.gz](scaler_mtm.gz) (scaler for the MtM neural network)
 
 
@@ -58,16 +59,19 @@ The repo contains the following notebooks and python files.
 - Upon training, one can perform a sensitivity analysis.
 - The approach is applicable to real data.
 
-### Step-by-Step Guide
+### Step-by-Step Guide for application to portfolio data
 ```bash
 # Clone the repository
-git clone https://github.com/username/repo-name.git
+git clone https://github.com/juliansester/DL_Concentration_Risk.git
 
-# Navigate to the project directory
+# Adjust the excel file 
+Change MDB portfolios.xlsx according to the changed input
 
+# Train the neural network
+Run Compute_GA_approx_MtM.ipynb and Compute_GA_approx_actuarial.ipynb
 
-
-
+# Evaluate the results
+Run Portfolio_Evaluation.ipynb
 
 
 # Limitations of the Approach and Potential Pitfalls
