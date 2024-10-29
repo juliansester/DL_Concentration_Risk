@@ -1,76 +1,77 @@
-
 # Code for "Measuring Name Concentrations through Deep Learning"
 
-## Eva Lütkebohmert, Julian Sester
+## Authors
+**Eva Lütkebohmert**, **Julian Sester**
 
-# Abstract
-We propose a new deep learning approach for the quantification of name concentration risk in loan portfolios. Our approach is tailored for small portfolios and allows for both an actuarial as well as a mark-to-market definition of loss. The training of our neural network relies on Monte Carlo simulations with importance sampling which we explicitly formulate for the CreditRisk+ and the ratings-based CreditMetrics model. Numerical results based on simulated as well as real data demonstrate the accuracy of our new approach and its superior performance compared to existing analytical methods for assessing name concentration risk in small and concentrated portfolios. 
+---
 
-# Preprint
-[Available on arxiv](https://arxiv.org/abs/2403.16525)
+## Abstract
+We propose a novel deep learning approach for quantifying name concentration risk in loan portfolios, designed specifically for small portfolios. This approach accommodates both actuarial and mark-to-market definitions of loss. Our neural network training relies on Monte Carlo simulations with importance sampling, which we explicitly formulate for both the CreditRisk+ and ratings-based CreditMetrics models. Numerical results using simulated and real data demonstrate the accuracy of our approach and its superior performance compared to existing analytical methods for name concentration risk assessment in small, concentrated portfolios.
+
+---
+
+## Preprint
+The full paper is available on [arxiv](https://arxiv.org/abs/2403.16525).
+
+---
 
 ## Table of Contents
-The repo contains the following notebooks and python files.
 
-- ### Creation of Scenarios
-	Notebooks to create Monte-Carlo simulations of scenarios.
+The repository includes the following notebooks and Python files:
 
-	-[Create_Scenarios_MtM.ipynb](Create_Scenarios_MtM.ipynb) (for the Mark-to-Market case)
-	-[Create_Scenarios_actuarial.ipynb](Create_Scenarios_actuarial.ipynb) (for the actuarial case)
-- ### Training of Neural Networks
-	Notebooks to train the neural networks.
+### 1. Creation of Scenarios
+- Monte Carlo simulation notebooks for scenario generation:
+  - [Create_Scenarios_MtM.ipynb](Create_Scenarios_MtM.ipynb): Mark-to-Market case
+  - [Create_Scenarios_actuarial.ipynb](Create_Scenarios_actuarial.ipynb): Actuarial case
 
-	-[Compute_GA_approx_MtM.ipynb](Compute_GA_approx_MtM.ipynb) (for the Mark-to-Market case)
-	-[Compute_GA_approx_actuarial.ipynb](Compute_GA_approx_actuarial.ipynb) (for the actuarial case)
+### 2. Neural Network Training
+- Training notebooks for neural networks:
+  - [Compute_GA_approx_MtM.ipynb](Compute_GA_approx_MtM.ipynb): Mark-to-Market case
+  - [Compute_GA_approx_actuarial.ipynb](Compute_GA_approx_actuarial.ipynb): Actuarial case
+- Python code files:
+  - [MtM_training.py](MtM_training.py): Mark-to-Market case
+  - [actuarial_training.py](actuarial_training.py): Actuarial case
 
-	The python code is contained here: 
+### 3. Auxiliary Functions
+- Helper functions for the project:
+  - [IS_misc_functions.py](IS_misc_functions.py)
+  - [misc_functions.py](misc_functions.py)
 
-	-[MtM_training.py](MtM_training.py) (for the Mark-to-Market case)
-	-[actuarial_training.py](actuarial_training.py) (for the actuarial case)
-- ### Definition of necessary auxiliary functions
-	-[IS_misc_functions.py](IS_misc_functions.py)
-	-[misc_functions.py](misc_functions.py)
-- ### Sensitivity Analysis
-	-[Sensitivities_mtm.ipynb](Sensitivities_mtm.ipynb) (for the Mark-to-Market case)
-	-[Sensitivities_actuarial.ipynb](Sensitivities_actuarial.ipynb) (for the actuarial case)
-- ### Evaluation with real MDB portfolios
-	-[Portfolio_Evaluation.ipynb](Portfolio_Evaluation.ipynb) (notebook)
-	-[MDB portfolios.xlsx](MDB portfolios.xlsx) (excel file with the data on the MDB portfolios)
-	-[transition_matrix_RC.csv](transition_matrix_RC.csv), [transition_matrix_SP.csv](transition_matrix_SP.csv) (the used transition matrices)
-	
-[probs.txt](probs.txt) (the probabilities that can be attained according to the S&P matrix)
-	
-- ### Misc
-	[scaler_actuarial.gz](scaler_actuarial.gz) (scaler for the actuarial neural network)
+### 4. Sensitivity Analysis
+- Sensitivity analysis notebooks:
+  - [Sensitivities_mtm.ipynb](Sensitivities_mtm.ipynb): Mark-to-Market case
+  - [Sensitivities_actuarial.ipynb](Sensitivities_actuarial.ipynb): Actuarial case
 
-	[scaler_mtm.gz](scaler_mtm.gz) (scaler for the MtM neural network)
+### 5. Evaluation with Real MDB Portfolios
+- Portfolio evaluation:
+  - [Portfolio_Evaluation.ipynb](Portfolio_Evaluation.ipynb): Evaluation notebook
+  - [MDB portfolios.xlsx](MDB portfolios.xlsx): MDB portfolio data
+  - [transition_matrix_RC.csv](transition_matrix_RC.csv) & [transition_matrix_SP.csv](transition_matrix_SP.csv): Transition matrices
+  - [probs.txt](probs.txt): S&P matrix probabilities
 
+### 6. Miscellaneous Files
+- Scalers for neural networks:
+  - [scaler_actuarial.gz](scaler_actuarial.gz): Actuarial neural network scaler
+  - [scaler_mtm.gz](scaler_mtm.gz): MtM neural network scaler
 
+---
 
 ## Features
-- The code allows to train neural networks for the actuarial case (Credit Risk+) and the mark-to market case (Credit Metrics) to compute granularity adjustments given credit portfolios characteristics as input.
-- Upon training, one can perform a sensitivity analysis.
-- The approach is applicable to real data.
+- **Training neural networks**: Supports actuarial (CreditRisk+) and mark-to-market (CreditMetrics) cases, allowing for the computation of granularity adjustments based on credit portfolio characteristics.
+- **Sensitivity analysis**: Post-training sensitivity analysis functionality.
+- **Real data applicability**: Suitable for application with real-world portfolio data.
 
-## Limitations of the Approach and Potential Pitfalls
-We remark the following limitations of the current implementation:
-- Note that the current implementation is limited to portfolios between 10 and 100 obligors
-- Only ELGDs of either 0.1 or 0.45 are trained
-- The creation of Monte-Carlo scenarios is computationally very expensive
+---
 
-### Step-by-Step Guide for application to portfolio data
-```bash
-# Clone the repository
-git clone https://github.com/juliansester/DL_Concentration_Risk.git
+## Limitations and Potential Pitfalls
+- Limited to portfolios with 10–100 obligors.
+- Only supports ELGDs of 0.1 or 0.45.
+- Monte Carlo scenario generation is computationally intensive.
 
-# Adjust the excel file 
-Change MDB portfolios.xlsx according to the changed input
+---
 
-# Train the neural network
-Run Compute_GA_approx_MtM.ipynb and Compute_GA_approx_actuarial.ipynb
+## Quick Start Guide
 
-# Evaluate the results
-Run Portfolio_Evaluation.ipynb
-
-
-
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/juliansester/DL_Concentration_Risk.git
