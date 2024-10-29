@@ -25,9 +25,12 @@ The repository includes the following notebooks and Python files:
   - [Create_Scenarios_actuarial.ipynb](Create_Scenarios_actuarial.ipynb): Actuarial case
 
 ### 2. Neural Network Training
-- Training notebooks for neural networks:
+- Training notebooks for the First order GA approximations (needed as input to the neural networks_:
   - [Compute_GA_approx_MtM.ipynb](Compute_GA_approx_MtM.ipynb): Mark-to-Market case
   - [Compute_GA_approx_actuarial.ipynb](Compute_GA_approx_actuarial.ipynb): Actuarial case
+- Training notebooks for the training of the neural networks:
+  - [Training_NN_MtM.ipynb](Training_NN_MtM.ipynb): Mark-to-Market case
+  - [Training_NN_actuarial.ipynb.ipynb](Training_NN_actuarial.ipynb): Actuarial case
 - Python code files:
   - [MtM_training.py](MtM_training.py): Mark-to-Market case
   - [actuarial_training.py](actuarial_training.py): Actuarial case
