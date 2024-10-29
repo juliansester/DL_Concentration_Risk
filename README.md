@@ -79,7 +79,7 @@ We remark the following limitations of the current implementation:
    git clone https://github.com/juliansester/DL_Concentration_Risk.git
    
 2. **Modify Input:**
-  Update MDB portfolios.xlsx as necessary**
+  Update MDB portfolios.xlsx as necessary.
 3. **Train the Neural Network:**
     Run Compute_GA_approx_MtM.ipynb for Mark-to-Market.
     Run Compute_GA_approx_actuarial.ipynb for Actuarial.
