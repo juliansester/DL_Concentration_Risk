@@ -14,26 +14,38 @@ The repo contains the following notebooks and python files.
 
 - ### Creation of Scenarios
 	Notebooks to create Monte-Carlo simulations of scenarios.
+
 	[Create_Scenarios_MtM.ipynb](Create_Scenarios_MtM.ipynb) (for the Mark-to-Market case)
+
 	[Create_Scenarios_actuarial.ipynb](Create_Scenarios_actuarial.ipynb) (for the actuarial case)
 - ### Training of Neural Networks
 	Notebooks to train the neural networks.
+
 	[Compute_GA_approx_MtM.ipynb](Compute_GA_approx_MtM.ipynb) (for the Mark-to-Market case)
+
 	[Compute_GA_approx_actuarial.ipynb](Compute_GA_approx_actuarial.ipynb) (for the actuarial case)
+
 	The python code is contained here: 
+
 	[MtM_training.py](MtM_training.py) (for the Mark-to-Market case)
+
 	[actuarial_training.py](actuarial_training.py) (for the actuarial case)
 - ### Definition of necessary auxiliary functions
 	[IS_misc_functions.py](IS_misc_functions.py)
+
 	[misc_functions.py](misc_functions.py)
 - ### Sensitivity Analysis
 	[Sensitivities_mtm.ipynb](Sensitivities_mtm.ipynb) (for the Mark-to-Market case)
+
 	[Sensitivities_actuarial.ipynb](Sensitivities_actuarial.ipynb) (for the actuarial case)
 - ### Evaluation with real MDB portfolios
 	[Portfolio_Evaluation.ipynb](Portfolio_Evaluation.ipynb) (notebook)
+
 	[MDB portfolios.xlsx](MDB portfolios.xlsx) (excel file with the data on the MDB portfolios)
+
 	[transition_matrix_RC.csv](transition_matrix_RC.csv), [transition_matrix_SP.csv](transition_matrix_SP.csv) (the used transition matrices)
-	[probs.txt](probs.txt) (the probabilities that can be attained according to the S&P matrix)
+	
+[probs.txt](probs.txt) (the probabilities that can be attained according to the S&P matrix)
 	
 - ### Misc
 	[scaler_actuarial.gz](scaler_actuarial.gz) (scaler for the actuarial neural network)
