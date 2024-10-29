@@ -64,9 +64,11 @@ The repository includes the following notebooks and Python files:
 ---
 
 ## Limitations and Potential Pitfalls
-- Limited to portfolios with 10–100 obligors.
-- Only supports ELGDs of 0.1 or 0.45.
-- Monte Carlo scenario generation is computationally intensive.
+We remark the following limitations of the current implementation:
+
+- Note that the current implementation is limited to portfolios between 10 and 100 obligors
+- Only ELGDs of either 0.1 or 0.45 are trained
+- The creation of Monte-Carlo scenarios is computationally very expensive
 
 ---
 
@@ -75,3 +77,12 @@ The repository includes the following notebooks and Python files:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/juliansester/DL_Concentration_Risk.git
+   
+2. **Modify Input:**
+  Update MDB portfolios.xlsx as necessary**
+3. **Train the Neural Network:**
+    Run Compute_GA_approx_MtM.ipynb for Mark-to-Market.
+    Run Compute_GA_approx_actuarial.ipynb for Actuarial.
+4. **Evaluate Results:**
+
+    Run Portfolio_Evaluation.ipynb for portfolio evaluation
