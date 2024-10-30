@@ -60,8 +60,9 @@ The repository includes the following notebooks and Python files:
 ---
 
 ## Features
-- **Training neural networks**: Supports actuarial (CreditRisk+) and mark-to-market (CreditMetrics) cases, allowing for the computation of granularity adjustments based on credit portfolio characteristics.
-- **Sensitivity analysis**: Post-training sensitivity analysis functionality.
+Our approach provides the following main features
+- **Training neural networks**: Supports underlying actuarial (CreditRisk+) and mark-to-market (CreditMetrics) framework, allowing for the extremely fast computation of granularity adjustments based on credit portfolio characteristics, given as an input to neural networks.
+- **Sensitivity analysis**: Allows to study , post-training, the sensitivity of the granularity adjustment w.r.t. its input parameters.
 - **Real data applicability**: Suitable for application with real-world portfolio data.
 
 ---
