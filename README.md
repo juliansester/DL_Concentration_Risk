@@ -34,6 +34,7 @@ The repository includes the following notebooks and Python files:
 - Python code files:
   - [MtM_training.py](MtM_training.py): Mark-to-Market case
   - [actuarial_training.py](actuarial_training.py): Actuarial case
+ 
 
 ### 3. Auxiliary Functions
 - Helper functions for the project:
@@ -51,6 +52,10 @@ The repository includes the following notebooks and Python files:
   - [MDB portfolios.xlsx](MDB portfolios.xlsx): MDB portfolio data
   - [transition_matrix_RC.csv](transition_matrix_RC.csv) & [transition_matrix_SP.csv](transition_matrix_SP.csv): Transition matrices
   - [probs.txt](probs.txt): S&P matrix probabilities
+
+### 6. Stress Testing
+- Mark-to-Market case: [Stress_Testing_MtM.ipynp](Stress_Testing_MtM)
+- Actuarial case: [Stress_Testing_actuarial.ipynp](Stress_Testing_actuarial)
 
 ### 6. Miscellaneous Files
 - Scalers for neural networks:
