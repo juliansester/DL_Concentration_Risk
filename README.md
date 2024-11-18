@@ -57,7 +57,7 @@ The repository includes the following notebooks and Python files:
 - Mark-to-Market case: [Stress_Testing_MtM.ipynp](Stress_Testing_MtM)
 - Actuarial case: [Stress_Testing_actuarial.ipynp](Stress_Testing_actuarial)
 
-### 6. Miscellaneous Files
+### 7. Miscellaneous Files
 - Scalers for neural networks:
   - [scaler_actuarial.gz](scaler_actuarial.gz): Actuarial neural network scaler
   - [scaler_mtm.gz](scaler_mtm.gz): MtM neural network scaler
