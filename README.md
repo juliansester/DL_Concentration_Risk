@@ -54,8 +54,8 @@ The repository includes the following notebooks and Python files:
   - [probs.txt](probs.txt): S&P matrix probabilities
 
 ### 6. Stress Testing
-- Mark-to-Market case: [Stress_Testing_MtM.ipynp](Stress_Testing_MtM.ipynp)
-- Actuarial case: [Stress_Testing_actuarial.ipynp](Stress_Testing_actuarial.ipynp)
+- Mark-to-Market case: [Stress_Testing_MtM.ipynp](Stress_Testing_MtM.ipynb)
+- Actuarial case: [Stress_Testing_actuarial.ipynp](Stress_Testing_actuarial.ipynb)
 
 ### 7. Miscellaneous Files
 - Scalers for neural networks:
